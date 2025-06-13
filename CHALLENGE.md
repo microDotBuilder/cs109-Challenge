@@ -1,22 +1,24 @@
-## Idea : Wildfire Risk Prediction with a Bayesian Network
+# Wildfire Risk Prediction with a Bayesian Network
 
-This idea is less about simulating the spread and more about predicting the risk of a fire starting or becoming large in a specific area, given certain conditions.
+This project focuses on predicting the risk of a wildfire starting or becoming large in a specific area, given certain conditions. The emphasis is on risk prediction rather than simulating fire spread.
 
-# The Core Idea:
+## Core Idea
 
-Create a Bayesian Network that models the causal relationships between factors that contribute to wildfire risk. A Bayesian Network is a directed acyclic graph where nodes are random variables and edges represent conditional dependencies.
+Develop a Bayesian Network to model the causal relationships between factors contributing to wildfire risk. A Bayesian Network is a directed acyclic graph where nodes represent random variables and edges denote conditional dependencies.
 
-# The Probability:
+## Probability Modeling
 
-[ ] Nodes: Your nodes could include variables like Temperature, Humidity, Wind Speed, Human Activity (e.g., near a campsite or road), Lightning Strike, and the final node Fire Occurs.
-[ ] Conditional Probability Tables (CPTs): For each node, you would define a probability distribution conditioned on its parents. For example, the probability of a Fire Occurs would be very high if Lightning Strike is true and Humidity is low. You can define these probabilities based on research, intuition, or even by "learning" them from historical data if you can find a suitable dataset.
+- **Nodes:** Potential variables include Temperature, Humidity, Wind Speed, Human Activity (e.g., proximity to campsites or roads), Lightning Strike, and the final node, Fire Occurs.
+- **Conditional Probability Tables (CPTs):** Each node is associated with a probability distribution conditioned on its parent nodes. For example, the probability of "Fire Occurs" is significantly higher if "Lightning Strike" is true and "Humidity" is low. These probabilities can be informed by research, expert intuition, or learned from historical data when available.
 
-# Academic Sophistication:
+## Academic Sophistication
 
-This project directly uses one of the most powerful concepts from CS109. You can demonstrate your understanding of conditional independence, the chain rule for Bayesian networks, and how to perform inference (i.e., calculate the probability of one node given evidence about others). For example, you could calculate P(Fire Occurs | Temperature=High, Humidity=Low).
+This project leverages key concepts from CS109, including conditional independence, the chain rule for Bayesian networks, and probabilistic inference. For instance, you can compute probabilities such as P(Fire Occurs | Temperature = High, Humidity = Low).
 
-# Data for B.C.:
+## Data for British Columbia (B.C.)
 
-You can find historical weather data and fire data for B.C. You wouldn't need to do complex machine learning; instead, you could use the data to inform the probabilities in your CPTs. For example, you could look at the weather conditions on days when large fires started to estimate your conditional probabilities.
+Historical weather and wildfire data for B.C. can be utilized to inform the CPTs. Complex machine learning is not required; instead, data analysis can help estimate conditional probabilities, such as examining weather conditions on days when large fires started.
 
-# Implementation: You can use Python libraries like pgmpy to build and run queries on your Bayesian Network.
+## Implementation
+
+Python libraries such as `pgmpy` can be used to construct and query the Bayesian Network.
